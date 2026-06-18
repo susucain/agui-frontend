@@ -5,11 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "docker:up": "docker compose -f docker-compose.yml up -d --build",
-    "docker:down": "docker compose -f docker-compose.yml down"
+    "docker:down": "docker compose -f docker-compose.yml down",
+    "docker:build": "docker build -t agui-frontend:latest .",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "@ai-sdk/react": "^3.0.200",

@@ -42,7 +42,7 @@ echo "  ✓ nginx 配置已更新"
 # ---- Step 4: 重载 nginx ----
 echo ""
 echo "[4/4] 重载 nginx..."
-nginx -t && nginx -s reload
+nginx -t && sudo systemctl reload nginx
 echo "  ✓ nginx 已重载"
 
 echo ""

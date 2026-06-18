@@ -8,6 +8,9 @@ RUN corepack enable && corepack prepare pnpm@latest --activate
 WORKDIR /app
 
 COPY pnpm-lock.yaml package.json ./
+
+# 使用国内镜像源加速依赖安装
+RUN pnpm config set registry https://registry.npmmirror.com
 RUN pnpm install --frozen-lockfile
 
 COPY . .

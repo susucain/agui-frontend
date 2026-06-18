@@ -1,0 +1,9 @@
+services:
+  agui-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    container_name: agui-frontend

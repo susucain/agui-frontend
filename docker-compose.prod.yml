@@ -1,0 +1,7 @@
+services:
+  agui-frontend:
+    image: ${REGISTRY_URL}/agui-frontend:latest
+    container_name: agui-frontend
+    ports:
+      - "80:80"
+    restart: unless-stopped

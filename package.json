@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "docker:up": "docker compose -f docker-compose.yml up -d --build",
+    "docker:down": "docker compose -f docker-compose.yml down"
   },
   "dependencies": {
     "@ai-sdk/react": "^3.0.200",
